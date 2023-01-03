@@ -1,0 +1,432 @@
+body
+{
+  background-color: #000;
+}
+html
+{
+  scroll-behavior: smooth;
+}
+header
+{
+  background: #000;
+  top:0;
+  width: 100%;
+  position: fixed;
+  height: 27px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding: 40px 100px 0.5px;
+  left:0;
+  z-index: 100000;
+  font-family: 'Rubik 80s Fade';
+}
+header .logo
+{
+  bottom: 18px;
+  position: relative;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.6s;
+}
+header ul
+{
+  right: 120px;
+  position: relative;
+  display:flex;
+  align-items: center;
+}
+header ul li
+{
+  bottom: 14px;
+  position: relative;
+  list-style: none;
+  transition: 0.6s;
+}
+header ul li a
+{
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 20px;
+  transition: 0.6s;
+}
+
+header .sticky ul li a{
+  color: #000;
+}
+.guitar_img
+{
+  position: absolute;
+  top:0px;
+  left:380px;
+  top:-200px;
+  border:solid;
+
+}
+.guitar_img:hover{
+  box-shadow: 0 5px 1000px 0 #764AF1 inset, 0 50px 2000px 0 #15f4ee,
+              0 5px 1000px 0 #764AF1 inset, 0 50px 2000px 0 #15f4ee;
+  text-shadow: 0 0 10px #FFFF, 0 0 10px #FFFF;
+  transition-duration: 2s;
+}
+.music_container{
+  float: left;
+  align-items: center;
+}
+h4{
+  background-color: #0000;
+  border-radius: 10%;
+  color: #FFFF;
+  font-size: 30px;
+  font-family: "Source Serif Pro";
+  width: 120px;
+}
+.play_button{
+  height: 35px;
+  width: 35px
+  border:solid;
+}
+h1
+{
+  font-family: 'Rubik 80s Fade', cursive;
+  text-align:center;
+  color: #000;
+  font-size:80px;
+  background: #fff;
+  opacity: 0.99;
+  border-width: 100px;
+  width: 100%;
+}
+h2
+{
+  margin-left: 35px;
+  position: absolute;
+  left:1000px;
+  top:210px;
+  font-family: 'Dancing Script', cursive;
+  color: #000;
+  width:200px;
+  size:100px;
+  font-size: 45px;
+  /*
+  background: linear-gradient(90deg,#ff0000,#ffff00,#ff00f3,#0033ff,#ff00c4,#ff0000);
+  -webkit-text-fill-color:transparent;
+  -webkit-background-clip:text;
+  animation: animate 10s linear infinite;
+  */
+}
+h3
+{
+  font-family: 'Rubik 80s Fade',"Source Serif Pro";
+  text-align:center;
+  color: #000;
+  font-size:80px;
+  background: #FFf;
+  opacity: 0.9;
+  border-width: 50px;
+  top:200px;
+}
+/*
+@keyframes animate{
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 400%;
+  }
+}
+*/
+/*
+.navbar{
+  background-color:#000;
+  border-radius: 10px;
+  width:440px;
+  position: absolute;
+  left:900px;
+  top:-2px;
+  height: 70px;
+}
+.navbar ul{
+  overflow:auto; //see the color of navbar goes off and adjust with parent color to prevent that we do this
+}
+.navbar li{
+  float:right;  // all the li float at left together and with one bulletpoint
+  list-style: none; // to remove the bullet point
+  margin: 8px 10px;
+}
+.navbar li a{
+  padding:3px 3px;
+  text-decoration: none; //to remove the underline
+  color: #fff;
+}
+.navbar li a:hover{
+  color: #000;  //here if we give color, only text get hover not text with its background to do that we can use background-color: //
+
+}
+*/
+/*
+.search
+{
+  float:right;
+  color:white;
+  padding: 12px 75px;
+}
+
+.navbar input
+{
+  border: 2px solid black;
+  border-radius: 4px;
+  padding:3px 17px;
+}
+*/
+#drum_div
+{
+  position: absolute;
+  top:1100px;
+  background-color: #000;
+  height: 900px;
+  width: 1330px;
+}
+
+button
+{
+  font-family: 'Rubik 80s Fade',"Source Serif Pro";
+}
+
+.drum
+{
+  background-color: #000;
+  position: absolute;
+  text-align: center;
+  font-size: 35px;
+  color:#fff;
+  border-radius: 100%;
+
+  font-weight: 400;
+  border: 5px solid #15f4ee;
+
+  letter-spacing: 15px;
+  cursor:pointer;
+  transition: 0.5s;
+}
+.drum:hover
+{
+  box-shadow: 0 5px 50px 0 #CF0A0A inset, 0 5px 500px 0 #15f4ee,
+              0 5px 50px 0 #CF0A0A inset, 0 5px 500px 0 #15f4ee;
+  text-shadow: 0 0 10px #FFFF, 0 0 10px #FFFF;
+}
+.w{
+     width: 300px;
+     height: 100px;
+     left:165px;
+     top:360px;
+     border: 20px solid;
+     border-color: #fff;
+}
+.a{
+
+     width: 300px;
+     height: 150px;
+     left:0px;
+     top:430px;
+     border: 20px solid;
+     border-color: #fff;
+}
+.s{
+
+     width: 300px;
+     height: 100px;
+     left:905px;
+     top:360px;
+     border: 20px solid;
+     border-color: #fff;
+}
+.space{
+
+     top:330px;
+     left:415px;
+     width: 550px;
+     height: 150px;
+     border: 30px solid;
+     border-color: #fff;
+}
+.j{
+
+     left: 255px;
+     top:270px;
+     width: 300px;
+     height: 100px;
+     border: 5px solid;
+     border-color: #fff;
+}
+.k{
+
+     left: 825px;
+     top:270px;
+     width: 300px;
+     height: 100px;
+     border: 5px solid;
+     border-color: #fff;
+}
+.l{
+
+     width: 300px;
+     height: 150px;
+     left:1030px;
+     top:430px;
+     border: 20px solid;
+     border-color: #fff;
+}
+.d{
+
+     left:515px;
+     top:230px;
+     width: 350px;
+     height: 100px;
+     border: 20px solid;
+     border-color: #fff;
+}
+/*
+.menu_bar
+{
+  background-color: #fff;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+*/
+#keyboard_div
+{
+  position: absolute;
+  top:1700px;
+  background-color: #000;  /*#16003B*/
+  height: 900px;
+  width: 1330px;
+}
+.keyboard
+{
+  background-color: #000;
+  position: absolute;
+  font-size: 35px;
+  color:#fff;
+  width: 150px;
+  height: 400px;
+  border: 5px solid #fff;
+  cursor:pointer;
+  transition: 0.5s;
+  top:230px;
+}
+.keyboard:hover
+{
+  box-shadow: 0 5px 50px 0 #15f4ee inset, 0 5px 500px 0 #CF0A0A,
+              0 5px 50px 0 #15f4ee inset, 0 5px 500px 0 #CF0A0A;
+  text-shadow: 0 0 10px #FFFF, 0 0 10px #FFFF;
+}
+.e{
+  left:60px;
+}
+.r{
+  left:210px;
+}
+.t{
+  left:360px;
+}
+.y{
+  left:510px;
+}
+.u{
+left: 660px;
+}
+.i{
+  left: 810px;
+}
+.o{
+left:960px;
+}
+.p{
+left:1110px;
+}
+#guitar_div
+{
+  position: absolute;
+  top:2400px;
+  background-color: #000;  /*#16003B*/
+  height: 900px;
+  width: 1330px;
+}
+.guitar{
+  position: absolute;
+  cursor:pointer;
+}
+.guitar:hover
+{
+  box-shadow: 0px 5px 50px 0px #15f4ee inset, 30px 5px 500px 30px #CF0A0A,
+              0px 5px 50px 0px #15f4ee inset, 30px 5px 500px 30px #CF0A0A;
+  text-shadow: 0 0 10px #FFFF, 0 0 10px #FFFF;
+}
+.v{
+  border-radius: 100%;
+  width: 400px;
+  height: 400px;
+  background-color: #FFFF;
+  left: 350px;
+}
+.z{
+  height: 10px;
+  width: 1340px;
+  top:330px;
+}
+.x{
+  height: 8.5px;
+  width: 1340px;
+  top:375px;
+}
+.c{
+  height: 7.5px;
+  width: 1340px;
+  top:425px;
+}
+.b{
+  height: 6.5px;
+  width: 1340px;
+  top:480px;
+}
+.n{
+  height: 5.5px;
+  width: 1340px;
+  top:530px;
+}
+.m{
+  height: 5px;
+  width: 1340px;
+  top:580px;
+}
+.bottom-container
+{
+  position: relative;
+  top:3000px;
+  background-color: #0D132A;
+  padding: 40px 0px 20px;
+  text-align: center;
+}
+.copyright
+{
+  color:#EAF6F6;
+  font-size: 0.75rem;
+  padding: 20px 0px;
+}
+.footer-link{
+  font-size: 1.1rem;
+  padding: 20px 10px 20px 10px;
+}

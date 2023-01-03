@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Musy Land</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <!--font families-->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <!--fivicon-->
+  <link rel="icon" href="C:\Users\Rithin Shetty\Desktop\web dev\music_land\favicon.jpg">
+</head>
+
+<body>
+    <!--Navbar-->
+    <header>
+        <a href="#" class="logo">musyland</a>
+        <ul>
+          <li><a href="#drum_div">Drum</a></li>
+          <li><a href="#keyboard_div">Piano</a></li>
+          <li><a href="#guitar_div">Guitar</a></li>
+          <!--
+          <div class="search">
+            <input type="text" name="search" id="search" placeholder="Search the Instrument">
+          </div>
+         Note: placeholde means hint in android  -->
+        </ul>
+    </header>
+
+    <table>
+      <tr>
+        <td>
+          <img class="guitar_img" src="C:\Users\Rithin Shetty\Desktop\web dev\music_land\images\pexels-photo-1010519.jpeg" alt="">
+        </td>
+        <td>
+          <h2>"Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything."  - <small>Plato</small></h2>
+        </td>
+      </tr>
+    </table>
+    <h1>Musy Land</h1>
+  <section id="drum_div">
+    <h3>Drum</h3>
+    <div class="set">
+      <button class="w drum">w</button>
+      <button class="a drum">a</button>
+      <button class="s drum">s</button>
+      <button class="space drum">space</button>
+      <button class="j drum">j</button>
+      <button class="k drum">k</button>
+      <button class="l drum">l</button>
+      <button class="d drum">d</button>
+      </div>
+      <!--
+     <div class="menu_bar">
+       <h3 class="logo">Musics</h3>
+       <ul>
+         <li> <button type="button" name="button"></button> </li>
+         <li> <button type="button" name="button"></button> </li>
+         <li> <button type="button" name="button"></button> </li>
+         <li> <button type="button" name="button"></button> </li>
+         <li> <button type="button" name="button"></button> </li>
+         <li> <button type="button" name="button"></button> </li>
+         <li> <button type="button" name="button"></button> </li>
+         <li> <button type="button" name="button"></button> </li>
+         <li> <button type="button" name="button"></button> </li>
+       </ul>
+     </div>
+   -->
+    </section>
+
+  <section id="keyboard_div">
+    <h3>Piano</h3>
+    <div class="set1">
+      <button class="e keyboard">e</button>
+      <button class="r keyboard">r</button>
+      <button class="t keyboard">t</button>
+      <button class="y keyboard">y</button>
+      <button class="u keyboard">u</button>
+      <button class="i keyboard">i</button>
+      <button class="o keyboard">o</button>
+      <button class="p keyboard">p</button>
+    </div>
+    </section>
+
+    <section id="guitar_div">
+      <h3>Gitter</h3>
+      <div class="set2">
+        <img class="v guitar"></button>
+        <button class="z guitar">z</button>
+        <button class="x guitar">x</button></button></button>
+        <button class="c guitar">c</button>
+        <button class="b guitar">b</button>
+        <button class="n guitar">n</button>
+        <button class="m guitar">m</button>
+      </div>
+    </section>
+
+
+      <div class="bottom-container">
+        <a class="footer-link" href="https://www.linkedin.com/in/rithin-shetty/">LinkedIn</a>
+        <a class="footer-link" href="https://twitter.com/RithinHn">Twitter</a>
+        <a class="footer-link" href="https://www.instagram.com/rithin_shetty/?hl=en">Instagram</a>
+        <a class="footer-link" href="https://rithinshettyhn.github.io/cv1/">Website</a>
+        <p class="copyright">© 2023 Rithin Shetty.</p>
+      </div>
+
+  <script type="text/javascript">
+  //for navbar animation
+  /*
+  window.addEventListener("scroll",function()){
+  var header=document.querySelector("header");
+  header.classList.toggle("sticky",window.scrollY >0);
+})*/
+  //controlling drum through button
+  for(var i=0;i<document.querySelectorAll(".drum").length;i++)
+  {
+    document.querySelectorAll(".drum")[i].addEventListener("click",function () {
+      var buttonInnerHtml=this.innerHTML;
+      makeSound(buttonInnerHtml);
+      buttonAnimation(buttonInnerHtml);
+    });
+  }
+
+  //controlling keyboard through button
+for(var i=0;i<document.querySelectorAll(".keyboard").length;i++)
+{
+document.querySelectorAll(".keyboard")[i].addEventListener("click",function () {
+  var buttonInnerHtml=this.innerHTML;
+  makeSound(buttonInnerHtml);
+  buttonAnimation(buttonInnerHtml);
+});
+}
+
+//controlling guitar by button
+for(var i=0;i<document.querySelectorAll(".guitar").length;i++)
+{
+  document.querySelectorAll(".guitar")[i].addEventListener("click",function () {
+    var buttonInnerHtml=this.innerHTML;
+    makeSound(buttonInnerHtml);
+    buttonAnimation(buttonInnerHtml);
+  });
+}
+
+//controlling through keyboard
+
+document.addEventListener("keypress",function(event){ //event alows us to tap into the event that triggered the listener note that event can be replaced by e
+makeSound(event.key);
+buttonAnimation(event.key);
+});
+
+
+
+//button animation
+function buttonAnimation(currentKey)
+{
+var activeButton=document.querySelector("."+currentKey); //this is just like class that is .w, .a etc
+activeButton.classList.add("pressed"); //pressed is the class
+setTimeout(function(){ //the function is exeguted after 0.1 sec therefore we gave 100 i.s here 1000 means 1sec
+  activeButton.classList.remove("pressed");
+},100);
+}
+
+
+//swith statement
+function makeSound(key){
+switch (key) {
+case "e":
+  var tom1=new Audio("sounds/Piano11.ogg");
+  tom1.play();
+break;
+case "r":
+  var tom2=new Audio("sounds/Piano110.ogg");
+  tom2.play();
+break;
+case "t":
+  var tom3=new Audio("sounds/Piano111.ogg");
+  tom3.play();
+break;
+case "y":
+  var tom4=new Audio("sounds/Piano112.ogg");
+  tom4.play();
+break;
+case "u":
+  var snare=new Audio("sounds/Piano113.ogg");
+  snare.play();
+break;
+case "i":
+  var crash=new Audio("sounds/Piano114.ogg");
+  crash.play();
+break;
+case "o":
+  var crash=new Audio("sounds/Piano115.ogg");
+  crash.play();
+break;
+case "p":
+  var kick=new Audio("sounds/Piano116.ogg");
+  kick.play();
+break;
+
+
+case "w":
+  var tom1=new Audio("sounds/tom-1.mp3");
+  tom1.play();
+break;
+case "a":
+  var tom2=new Audio("sounds/tom-2.mp3");
+  tom2.play();
+break;
+case "s":
+  var tom3=new Audio("sounds/tom-3.mp3");
+  tom3.play();
+break;
+case "d":
+  var tom4=new Audio("sounds/tom-4.mp3");
+  tom4.play();
+break;
+case "space":
+  var snare=new Audio("sounds/snare.mp3");
+  snare.play();
+break;
+case "k":
+  var crash=new Audio("sounds/crash.mp3");
+  crash.play();
+break;
+case "j":
+  var crash=new Audio("sounds/crash.mp3");
+  crash.play();
+break;
+case "l":
+  var kick=new Audio("sounds/kick-bass.mp3");
+  kick.play();
+break;
+
+case "z":
+  var tom1=new Audio("sounds/1st_String_E.mp3");
+  tom1.play();
+break;
+case "x":
+  var tom2=new Audio("sounds/2nd_String_B.mp3");
+  tom2.play();
+break;
+case "c":
+  var tom3=new Audio("sounds/3rd_String_G.mp3");
+  tom3.play();
+break;
+case "b":
+  var tom4=new Audio("sounds/4th_String_D.mp3");
+  tom4.play();
+break;
+case "n":
+  var snare=new Audio("sounds/5th_String_A.mp3");
+  snare.play();
+break;
+case "m":
+  var crash=new Audio("sounds/6th_String_E.mp3");
+  crash.play();
+break;
+default:console.log(buttonInnerHtml);
+}}
+
+  </script>
+
+
+</body>
+
+</html>
