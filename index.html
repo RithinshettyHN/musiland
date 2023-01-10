@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
   <!--fivicon-->
   <link rel="icon" href="favicon.jpg">
+  <meta name="viewport" content="width=device-width,initial-scale=0.45,maximum-scale=0.45,user-scalable=0">
 </head>
 
 <body>
@@ -140,6 +141,7 @@ for(var i=0;i<document.querySelectorAll(".guitar").length;i++)
     var buttonInnerHtml=this.innerHTML;
     makeSound(buttonInnerHtml);
     buttonAnimation(buttonInnerHtml);
+
   });
 }
 
@@ -149,8 +151,6 @@ document.addEventListener("keypress",function(event){ //event alows us to tap in
 makeSound(event.key);
 buttonAnimation(event.key);
 });
-
-
 
 //button animation
 function buttonAnimation(currentKey)
@@ -259,6 +259,13 @@ case "m":
 break;
 default:console.log(buttonInnerHtml);
 }}
+
+  //alert for landscape mode
+  window.matchMedia("(orientation:portrait)").addEventListener("change",e=>{
+    const portrait=e.matches;
+    if(portrait)
+    alert("Please Change to landscape mode to get best experience");
+  });
 
   </script>
 
