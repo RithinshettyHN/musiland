@@ -213,9 +213,9 @@ h3
 #drum_div
 {
   position: absolute;
-  top:1100px;
+  top:1150px;
   background-color: #000;
-  height: 900px;
+  height: 1000px;
   width: 1330px;
 }
 
@@ -332,7 +332,7 @@ button
 #keyboard_div
 {
   position: absolute;
-  top:1700px;
+  top:1780px;
   background-color: #000;  /*#16003B*/
   height: 900px;
   width: 1330px;
@@ -383,7 +383,7 @@ left:1110px;
 #guitar_div
 {
   position: absolute;
-  top:2400px;
+  top:2450px;
   background-color: #000;  /*#16003B*/
   height: 900px;
   width: 1330px;
